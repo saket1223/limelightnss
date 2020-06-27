@@ -10,10 +10,6 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     
-    <link href="daily_running_news_list.html" rel="import" />
-    <link href="important_blog.html" rel="import" />
-    <link href="important_site_path.html" rel="import" />
-    <link href="travel_related_site_in_india.html" rel="import" />
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -55,17 +51,18 @@
 
   <div class="nav-scroller py-1 mb-2">
     <nav class="nav d-flex justify-content-between">
-      <a class="p-2 text-muted" href="#">Home</a>
-      <a class="p-2 text-muted" href="#"  onclick="link(0)">Daily Running News List</a>
-      <a class="p-2 text-muted" href="#"  onclick="link(1)">Important Blog</a>
-      <a class="p-2 text-muted" href="#"  onclick="link(2)">Important Site Path</a>
-      <a class="p-2 text-muted" href="#"  onclick="link(3)">Travel Related Site in India</a>
+      <a class="p-2 text-muted" href="../../index.html">Home</a>
+      <a class="p-2 text-muted" id="daily_running_news_list" href="#"  >Daily Running News List</a>
+      <a class="p-2 text-muted" id="important_blog" href="#"  >Important Blog</a>
+      <a class="p-2 text-muted" id="important_site_path" href="#"  >Important Site Path</a>
+      <a class="p-2 text-muted" id="travel_related_site_in_india" href="#"  >Travel Related Site in India</a>
     </nav>
   </div>
 </div>
 <main role="main" class="container">
   <div class="row">
     <div class="col-md-8 blog-main" >
+       
       <div id="innerpage" class="col-md-8">
 
       </div>
@@ -119,16 +116,36 @@
   
   
   <!-- JS, Popper.js, and jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  
+  <script src="../javascript/app.js"></script>
 
 <script>
-    function link(id){
-        var extern = document.getElementsByTagName("link")[id].import;
-        $("#innerpage").html(extern);
-    }
+    
+        $(function(){
+            $( "#daily_running_news_list" ).load( "daily_running_news_list.html", function() {
+  alert( "Load was performed." );
+});
+            $("#daily_running_news_list").on("click",function(){
+                $('#innerpage').load("daily_running_news_list.html");
+
+            });
+            $("#important_blog").on("click",function(){
+                $('#innerpage').load("important_blog.html");
+
+            });
+            $("#important_site_path").on("click",function(){
+                $('#innerpage').load("important_site_path.html");
+
+            });
+            $("#travel_related_site_in_india").on("click",function(){
+                $('#innerpage').load("travel_related_site_in_india.html");
+
+            });
+        });
+   
 </script>
 
 </body>
