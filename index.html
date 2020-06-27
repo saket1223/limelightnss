@@ -219,26 +219,26 @@
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-<script src="../javascript/app.js"></script>
+<script src="app/javascript/app.js"></script>
 
 <script>
   
       $(function(){
          
           $("#daily_running_news_list").on("click",function(){
-              $('.jumbotron').load("app/pages/daily_running_news_list.html");
+              $('.jumbotron').load("/app/pages/daily_running_news_list.html");
 
           });
           $("#important_blog").on("click",function(){
-              $('.jumbotron').load("app/pages/important_blog.html");
+              $('.jumbotron').load("/app/pages/important_blog.html");
 
           });
           $("#important_site_path").on("click",function(){
-              $('.jumbotron').load("app/pages/important_site_path.html");
+              $('.jumbotron').load("/app/pages/important_site_path.html");
 
           });
           $("#travel_related_site_in_india").on("click",function(){
-              $('.jumbotron').load("app/pages/travel_related_site_in_india.html");
+              $('.jumbotron').load("/app/pages/travel_related_site_in_india.html");
 
           });
       });
