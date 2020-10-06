@@ -1,5 +1,5 @@
 $(function(){
-    $('#innerpage').load("/limelightnss/app/pages/home.html");
+    $('#innerpage').load("../limelightnss/app/pages/home.html");
 
     $("#daily_running_news_list").on("click",function(){
         $('#innerpage').load("/limelightnss/app/pages/daily_running_news_list.html");
