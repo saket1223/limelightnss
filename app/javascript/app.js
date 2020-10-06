@@ -1,10 +1,11 @@
 $(function(){
     $('#innerpage').load("/limelightnss/app/pages/home.html");
-
+//path chnage
     $("#daily_running_news_list").on("click",function(){
         $('#innerpage').load("/limelightnss/app/pages/daily_running_news_list.html");
 
     });
+    
     $("#home").on("click",function(){
         $('#innerpage').load("/limelightnss/app/pages/home.html");
 
@@ -22,4 +23,5 @@ $(function(){
         $('#innerpage').load("/limelightnss/app/pages/travel_related_site_in_india.html");
 
     });
+    
 });
